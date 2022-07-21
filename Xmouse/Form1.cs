@@ -35,16 +35,11 @@ namespace Xmouse
         {
             InitializeComponent();
 
-            int flag = GetSystemMetrics(23);//获取当前鼠标设置状态 
-            if (flag == 0)//左手习惯 
-            {
-                LeftMouse();
-            }
-            else//右手习惯 
-            {
-                RightMouse();
-
-            }
+            
+            // 默认为左手
+            LeftMouse();
+           
+          
             this.Resize += Form1_Resize;
         }
 
