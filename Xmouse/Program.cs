@@ -14,7 +14,8 @@ namespace Xmouse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Xmouse());
+            Xmouse xmouse = new Xmouse();
+            Application.Run(xmouse);
         }
     }
 }

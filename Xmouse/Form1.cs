@@ -37,14 +37,12 @@ namespace Xmouse
 
             
             // 默认为左手
-            LeftMouse();
-           
-          
+            LeftMouse();          
             this.Resize += Form1_Resize;
         }
 
 
-        //单机窗体最小化时窗体隐藏 
+        //单击窗体最小化时窗体隐藏 
         void Form1_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
@@ -199,6 +197,11 @@ namespace Xmouse
             Key_R = hotkey.RegisterHotkey(System.Windows.Forms.Keys.R, Hotkey.KeyFlags.MOD_ALT);   //定义快键(Alt+R)
             hotkey.OnHotkey += new HotkeyEventHandler(OnHotkey);
             countdown.Visible = false;
+
+
+            this.WindowState = FormWindowState.Minimized; //启动时将窗体设置为最小化
+            this.ShowInTaskbar = false; //不在任务栏中显示
+            this.mainNotifyIcon.Visible = true;
 
         }
 
