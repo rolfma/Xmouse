@@ -34,8 +34,6 @@ namespace Xmouse
         public Xmouse()
         {
             InitializeComponent();
-
-            
             // 默认为左手
             LeftMouse();          
             this.Resize += Form1_Resize;
@@ -152,7 +150,7 @@ namespace Xmouse
 
         public void OnHotkey(int HotkeyID)
         {
-            if (!this.Visible)
+            if (this.WindowState==FormWindowState.Minimized || !this.Visible)
             {
                
                 this.BackColor = Color.White;
@@ -193,15 +191,11 @@ namespace Xmouse
             Tools.SetMid(this);
             Hotkey hotkey;
             hotkey = new Hotkey(this.Handle);
-            Key_L = hotkey.RegisterHotkey(System.Windows.Forms.Keys.L, Hotkey.KeyFlags.MOD_ALT);   //定义快键(Alt+L)
-            Key_R = hotkey.RegisterHotkey(System.Windows.Forms.Keys.R, Hotkey.KeyFlags.MOD_ALT);   //定义快键(Alt+R)
+            Key_L = hotkey.RegisterHotkey(Keys.L, Hotkey.KeyFlags.MOD_ALT);   //定义快键(Alt+L)
+            Key_R = hotkey.RegisterHotkey(Keys.R, Hotkey.KeyFlags.MOD_ALT);   //定义快键(Alt+R)
             hotkey.OnHotkey += new HotkeyEventHandler(OnHotkey);
             countdown.Visible = false;
 
-
-            this.WindowState = FormWindowState.Minimized; //启动时将窗体设置为最小化
-            this.ShowInTaskbar = false; //不在任务栏中显示
-            this.mainNotifyIcon.Visible = true;
 
         }
 

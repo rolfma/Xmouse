@@ -38,10 +38,10 @@
             this.mainNotifyContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menu_mouse_left = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_mouse_right = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_about = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.countdown = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.menu_about = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.mainNotifyContextMenuStrip.SuspendLayout();
@@ -52,18 +52,20 @@
             this.LabelText.AutoSize = true;
             this.LabelText.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LabelText.ForeColor = System.Drawing.Color.DimGray;
-            this.LabelText.Location = new System.Drawing.Point(89, 16);
+            this.LabelText.Location = new System.Drawing.Point(134, 24);
+            this.LabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelText.Name = "LabelText";
-            this.LabelText.Size = new System.Drawing.Size(92, 27);
+            this.LabelText.Size = new System.Drawing.Size(137, 40);
             this.LabelText.TabIndex = 1;
             this.LabelText.Text = "左手鼠标";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(88, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 50);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -72,9 +74,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(179, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(268, 21);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 45);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
@@ -83,9 +86,10 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel1.Location = new System.Drawing.Point(115, 69);
+            this.linkLabel1.Location = new System.Drawing.Point(172, 104);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(29, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(44, 18);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "关于";
@@ -103,19 +107,20 @@
             // 
             // mainNotifyContextMenuStrip
             // 
+            this.mainNotifyContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mainNotifyContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_mouse_left,
             this.menu_mouse_right,
             this.menu_about,
             this.退出ToolStripMenuItem});
             this.mainNotifyContextMenuStrip.Name = "mainNotifyContextMenuStrip";
-            this.mainNotifyContextMenuStrip.Size = new System.Drawing.Size(181, 114);
+            this.mainNotifyContextMenuStrip.Size = new System.Drawing.Size(139, 148);
             // 
             // menu_mouse_left
             // 
             this.menu_mouse_left.Image = ((System.Drawing.Image)(resources.GetObject("menu_mouse_left.Image")));
             this.menu_mouse_left.Name = "menu_mouse_left";
-            this.menu_mouse_left.Size = new System.Drawing.Size(180, 22);
+            this.menu_mouse_left.Size = new System.Drawing.Size(138, 36);
             this.menu_mouse_left.Text = "左手";
             this.menu_mouse_left.Click += new System.EventHandler(this.Left_Click);
             // 
@@ -123,23 +128,31 @@
             // 
             this.menu_mouse_right.Image = ((System.Drawing.Image)(resources.GetObject("menu_mouse_right.Image")));
             this.menu_mouse_right.Name = "menu_mouse_right";
-            this.menu_mouse_right.Size = new System.Drawing.Size(180, 22);
+            this.menu_mouse_right.Size = new System.Drawing.Size(138, 36);
             this.menu_mouse_right.Text = "右手";
             this.menu_mouse_right.Click += new System.EventHandler(this.Right_Click);
+            // 
+            // menu_about
+            // 
+            this.menu_about.Name = "menu_about";
+            this.menu_about.Size = new System.Drawing.Size(138, 36);
+            this.menu_about.Text = "关于";
+            this.menu_about.Click += new System.EventHandler(this.menu_about_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.Logout_Click);
             // 
             // countdown
             // 
             this.countdown.AutoSize = true;
-            this.countdown.Location = new System.Drawing.Point(124, 47);
+            this.countdown.Location = new System.Drawing.Point(186, 70);
+            this.countdown.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.countdown.Name = "countdown";
-            this.countdown.Size = new System.Drawing.Size(0, 12);
+            this.countdown.Size = new System.Drawing.Size(0, 18);
             this.countdown.TabIndex = 5;
             // 
             // timer1
@@ -148,26 +161,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // menu_about
-            // 
-            this.menu_about.Name = "menu_about";
-            this.menu_about.Size = new System.Drawing.Size(180, 22);
-            this.menu_about.Text = "关于";
-            this.menu_about.Click += new System.EventHandler(this.menu_about_Click);
-            // 
             // Xmouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 101);
+            this.ClientSize = new System.Drawing.Size(417, 152);
             this.Controls.Add(this.countdown);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Xmouse";
+            this.ShowInTaskbar = false;
             this.Text = "Xmouse";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Xmouse_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
